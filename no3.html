@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are u sure??</title>
+    
+    <link id="favicon" rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
+
+    <style>
+        @font-face {
+            font-family: 'Lovera';
+            src: url('lovera.woff2') format('woff2'); 
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f3c2e6;
+            font-family: 'Lovera', 'Georgia', serif;
+            overflow: hidden; 
+        }
+
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+            padding: 20px 0;
+        }
+
+        .gif-container {
+            width: 70vw;
+            max-width: 280px;
+            height: 70vw;
+            max-height: 280px;
+            margin: 0 auto 25px auto;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .gif-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            color: #ff1a4d;
+            font-size: clamp(1.5rem, 6vw, 2.2rem);
+            margin: 10px 0 45px 0;
+            font-weight: normal;
+            line-height: 1.4;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: clamp(10px, 4vw, 30px);
+        }
+
+        .btn-link, .btn-submit {
+            text-decoration: none;
+            background-color: #f78ae0;
+            color: white;
+            width: clamp(130px, 35vw, 180px);
+            height: clamp(55px, 15vw, 70px);
+            font-family: 'Lovera', 'Georgia', serif;
+            font-size: clamp(1.2rem, 5vw, 2rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            cursor: pointer;
+            border: none;
+            padding: 0;
+            flex-shrink: 0;
+        }
+
+        #noButton {
+            position: relative; 
+            z-index: 999;
+        }
+
+        .btn-link:hover, .btn-submit:hover {
+            background-color: #ff003c; 
+            color: #fff;
+            box-shadow: 0 0 15px #ff003c, 0 0 30px #ff003c, 0 0 60px #ff003c;
+        }
+
+        form { margin: 0; display: inline-block; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="gif-container">
+            <img id="mainGif" src="https://i.pinimg.com/originals/87/d5/88/87d588d92e1b4decd302a96c265d7a39.gif" alt="Asking out">
+        </div>
+
+        <h1>Are you really sure. Do you like me back?</h1>
+
+        <!--Make sure you have your own formspree account and form created paste the code here 
+        for example: action="https://formspree.io/f/xbdneggarz
+
+        ALSO, if you published it as a site make sure to change the site name below + desired
+        directory. example : value="https://confessionz.page().)gd/date.html
+        -->
+
+        <div class="button-group">
+            <form action="https://formspree.io/f/xbdzrzwy" method="POST">
+                <input type="hidden" name="Message" value="SHE SAID YES AFTER A A LOT OF NO'S!">
+                <input type="hidden" name="_subject" value="Final Response: GOT FORCED YES!">
+                <input type="hidden" name="_next" value="https://confessionz.page.gd/date.html">
+                <button type="submit" class="btn-submit">Yes</button>
+            </form>
+
+            <a href="no-final.html" class="btn-link" id="noButton">No</a>
+        </div>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById('noButton');
+        const mainGif = document.getElementById('mainGif');
+        const favicon = document.getElementById('favicon');
+        let clickCount = 0;
+        let scale = 1.0;
+        
+        const gifs = [
+            "https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyMHF0OTZnbzNiNnFnemdhOXBzY3JhanI2NW5yMmlvbHZjYTlmazBzcyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/iJJ6E58EttmFqgLo96/200w.gif", 
+            "https://media.tenor.com/vyHkpUjxjWYAAAAM/hug-me-im-sad.gif",
+            "https://media.tenor.com/vSx_SAt2dZ4AAAAM/bye.gif", 
+            "https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyM24zcmNsb3Z4enpoeXkxajl5cGQ2cTN5ZjdpcWQydzMwYXlvYmNjNyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/sLkIthus9lEwoe7PRx/200w.gif", 
+            "https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyNGs4a3d6NGNpZnBrbWhtdXpscmMyYm10bXMwaWxpbGQ0ejlnZ2xydCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/98MaHVwJOmWMz4cz1K/200w.gif"  
+        ];
+
+        const emojis = ["💔", "😢", "😭", "🥀", "🥺", "💀", "🩹", "🫠", "🌧️", "🥺"];
+
+        const messages = [
+            "No", "Are you really really really sure??", "Super duper ultra mega sure??", 
+            "Basin na miss-click, try again", "sure najud?? hawhhwhshwa", "Again daw if sure", 
+            "You're mean :(, final no na?", "No najud as in?", "NO (Click YES pls)", "final na jud?"
+        ];
+
+        noBtn.addEventListener('click', function(e) {
+            if (clickCount < 10) {
+                e.preventDefault(); 
+                clickCount++;
+
+                // 1. Shrink and move
+                scale -= 0.07;
+                noBtn.style.transform = `scale(${scale})`;
+                noBtn.style.position = 'fixed'; // Better for mobile teleporting
+                
+                // Calculate safe boundaries so it doesn't leave the phone screen
+                const btnWidth = noBtn.offsetWidth * scale;
+                const btnHeight = noBtn.offsetHeight * scale;
+                
+                const maxX = window.innerWidth - btnWidth;
+                const maxY = window.innerHeight - btnHeight;
+
+                const x = Math.random() * maxX;
+                const y = Math.random() * maxY;
+
+                noBtn.style.left = `${x}px`;
+                noBtn.style.top = `${y}px`;
+
+                // 2. Change Text
+                noBtn.innerText = messages[clickCount] || "Final najud in the whole wide world? hanggang sa hanggan? Above and beyond?";
+
+                // 3. Change GIF
+                if (clickCount % 2 === 0) {
+                    let gifIndex = Math.floor(clickCount / 2) - 1;
+                    if(gifs[gifIndex]) mainGif.src = gifs[gifIndex];
+                }
+
+                // 4. Change Favicon
+                let currentEmoji = emojis[clickCount - 1] || "🥀";
+                favicon.href = `data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>${currentEmoji}</text></svg>`;
+            }
+        });
+    </script>
+</body>
+</html>
