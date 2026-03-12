@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Big Question</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
+
+    <style>
+        @font-face {
+            font-family: 'Lovera';
+            src: url('lovera.woff2') format('woff2'); 
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f3c2e6;
+            font-family: 'Lovera', 'Georgia', serif; 
+        }
+
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+            padding: 20px 0;
+        }
+
+        .gif-container {
+            width: 75vw;
+            max-width: 280px;
+            height: 75vw;
+            max-height: 280px;
+            margin: 0 auto 25px auto;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .gif-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            color: #ff1a4d;
+            font-size: clamp(1.5rem, 7vw, 2.2rem);
+            margin: 10px 0 45px 0;
+            font-weight: normal;
+            line-height: 1.4;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: clamp(15px, 5vw, 30px);
+            flex-wrap: wrap;
+        }
+
+        .btn-link, .btn-submit {
+            text-decoration: none;
+            background-color: #f78ae0;
+            color: white;
+            width: clamp(130px, 38vw, 180px);
+            height: clamp(55px, 15vw, 70px);
+            font-family: 'Lovera', 'Georgia', serif;
+            font-size: clamp(1.2rem, 5vw, 2rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            padding: 0;
+            flex-shrink: 0;
+        }
+
+        .btn-link:hover, .btn-submit:hover {
+            background-color: #ff003c; 
+            color: #fff;
+            box-shadow: 0 0 15px #ff003c, 0 0 30px #ff003c, 0 0 60px #ff003c;
+            transform: scale(1.05);
+        }
+
+        form {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="gif-container">
+            <img src="https://i.pinimg.com/originals/ce/66/f4/ce66f42bb8dbaf08f361d3c3bb0ff3ab.gif" alt="Asking out">
+        </div>
+
+        <h1>Will you go out with me if I asked<br>you out?</h1>
+
+<!--Make sure you have your own formspree account and form created paste the code here 
+        for example: action="https://formspree.io/f/xbdneggarz
+
+        ALSO, if you published it as a site make sure to change the site name below + desired
+        directory. example : value="https://confessionz.page().)gd/date.html
+        -->
+
+        <div class="button-group">
+            <form action="https://formspree.io/f/xbdzrzwy" method="POST" id="finalForm">
+                <input type="hidden" name="Message" value="SHE SAID YES! She will go out with you!">
+                <input type="hidden" name="_subject" value="Final Response: YES!">
+    
+                <input type="hidden" name="_next" value="https://confessionz.page.gd/yey.html">
+    
+                <button type="submit" class="btn-submit">Yes</button>
+            </form>
+
+            <a href="sad.html" class="btn-link">No</a>
+        </div>
+    </div>
+
+    <script>
+    // This script forces the browser to jump to yey.html after sending
+    document.getElementById('finalForm').onsubmit = function() {
+        setTimeout(function() {
+            window.location.href = "https://confessionz.page.gd/yey.html";
+        }, 500); // 500ms delay to ensure the form starts sending
+    };
+    </script>
+
+</body>
+</html>
